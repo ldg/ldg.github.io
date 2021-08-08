@@ -1,0 +1,23 @@
+//resets
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    color: $very-greyblue;
+}
+h2 {
+    font-size: 1.8rem;
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}

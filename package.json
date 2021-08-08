@@ -1,0 +1,11 @@
+{
+  "name": "blogr-v3",
+  "version": "1.0.0",
+  "description": "![Design preview for the Blogr landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": { 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,57 @@
+$lightred: hsl(356, 100%, 66%);
+$very-lightred: hsl(355, 100%, 74%);
+$very-darkblue: hsl(208, 49%, 24%);
+
+ $white: hsl(0, 0%, 100%);
+ $greyblue: hsl(240, 2%, 79%);
+ $very-greyblue: hsl(207, 13%, 34%);
+ $very-darkblue: hsl(240, 10%, 16%);
+ 
+ $gradient-verylightred: hsl(13, 100%, 72%);
+ $gradient-lightred: hsl(353, 100%,62%);
+ $gradient-darkgreyblue: hsl(237, 17%, 21%);
+ $gradient-darkdesaturatedblue: hsl(237, 23%, 32%);
+
+ $breakpoint-phone: 25.875rem;
+ $breakpoint-desktop: 60rem;
+
+ $font-size-body: 16px;
+
+ $header-font-family:'Overpass', sans-serif;
+ $body-font-family: 'Ubuntu', sans-serif; 
+
+ h1, h2,.button {
+    font-family: $header-font-family;
+ }
+ h3,p {
+    font-family: $body-font-family;
+    font-weight: normal;
+ }
+
+ /* Utility classes */
+ .show{
+    margin-top: 4rem;
+    opacity: 1;
+    transition: margin-top 100ms ease-out;
+    transition: opacity 400ms ease-out;
+ }
+ .hide {
+    opacity: 0;
+    margin-top: -55rem;
+    transition: opacity 200ms ease-out;
+    transition: margin-top 400ms ease-out;
+ }
+
+ .submenu-show {
+   opacity: 1;
+   transition: opacity 150ms ease-in;
+   display: block;
+   background: $greyblue;
+   width: 100%;
+   border-radius: .5rem;
+   padding: .5rem;
+ }
+ .submenu-hide {
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+ }
