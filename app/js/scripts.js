@@ -27,12 +27,6 @@ function hideSubMenu() {
 }
 hideSubMenu();
 
-//add event listener to first submenuTrigger
-// submenuTrigger[0].addEventListener('click', function(){
-//     subMenuEl[0].classList.toggle('submenu-show');
-//     subMenuEl[0].classList.toggle('submenu-hide'); 
-// })
-
 
 
 function submenuToggle(){
@@ -49,9 +43,4 @@ function submenuToggle(){
     console.log('submenuToggle triggered'); 
 }
 submenuToggle();
-
-// submenuTrigger.addEventListener('click', function(){
-//     subMenuEl.classList.toggle('submenu-show');
-//     subMenuEl.classList.toggle('submenu-hide');
-// });
 
