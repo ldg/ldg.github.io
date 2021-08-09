@@ -43,15 +43,16 @@ $very-darkblue: hsl(208, 49%, 24%);
  }
 
  .submenu-show {
+   display: block;
    opacity: 1;
    transition: opacity 150ms ease-in;
-   display: block;
    background: $greyblue;
    width: 100%;
    border-radius: .5rem;
    padding: .5rem;
  }
  .submenu-hide {
+    display:none;
     opacity: 0;
     transition: opacity 200ms ease-out;
  }
