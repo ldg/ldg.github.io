@@ -2,15 +2,20 @@
 let mobileMenu = document.querySelector('.mobile-menu-toggle');
 let menuContainer = document.querySelector('.mobile-menu-container');
 
+// hide menu container by default
 function hideMenu() {
     menuContainer.classList.add('hide');
 }
 hideMenu();
 
+//add event listener to open mobile menu
 mobileMenu.addEventListener('click', function(){
 
     menuContainer.classList.toggle('show');
     menuContainer.classList.toggle('hide');
+
+    // close all submenus when closing mobile menu
+    // add code
 
 });
 
@@ -18,8 +23,7 @@ mobileMenu.addEventListener('click', function(){
 let submenuTrigger = document.getElementsByClassName('carat');
 let subMenuEl = document.getElementsByClassName('submenu');
 
-console.log(subMenuEl);
-// add hide class to submenu
+// hide submenus by default
 function hideSubMenu() {
     for(let i = 0;i < subMenuEl.length; i++ ){
         subMenuEl[i].classList.add('submenu-hide');
@@ -27,20 +31,18 @@ function hideSubMenu() {
 }
 hideSubMenu();
 
-
-
+// loop through submenus and add event listeners to toggle submenus
 function submenuToggle(){
     for(let i = 0; i < submenuTrigger.length; i++ ) {
 
         submenuTrigger[i].addEventListener('click', function(){
             subMenuEl[i].classList.toggle('submenu-show');
             subMenuEl[i].classList.toggle('submenu-hide'); 
-            console.log(i);
         })
-        console.log(i);
             
     }
-    console.log('submenuToggle triggered'); 
+    // close all other open submenus
+    // add code
 }
 submenuToggle();
 
