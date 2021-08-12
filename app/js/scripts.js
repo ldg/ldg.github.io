@@ -1,6 +1,10 @@
-//hamburger menu
+// hamburger menu
 let mobileMenu = document.querySelector('.mobile-menu-toggle');
+// mobile menu container
 let menuContainer = document.querySelector('.mobile-menu-container');
+// submenus
+let submenuTrigger = document.getElementsByClassName('carat');
+let subMenuEl = document.querySelectorAll('.submenu');
 
 // hide menu container by default
 function hideMenu() {
@@ -11,17 +15,18 @@ hideMenu();
 //add event listener to open mobile menu
 mobileMenu.addEventListener('click', function(){
 
+    // toggle mobile menu
     menuContainer.classList.toggle('show');
     menuContainer.classList.toggle('hide');
-
-    // close all submenus when closing mobile menu
-    // add code
-
+    
+    //if subMenuEl has the class submenu-hide, run the close submenus function
+    // for(let i = 0; i < subMenuEl.length; i++ ) {
+    //     console.log('submenu for loop - ' );
+    // }
+    
 });
 
-// submenus
-let submenuTrigger = document.getElementsByClassName('carat');
-let subMenuEl = document.getElementsByClassName('submenu');
+
 
 // hide submenus by default
 function hideSubMenu() {
@@ -39,10 +44,12 @@ function submenuToggle(){
             subMenuEl[i].classList.toggle('submenu-show');
             subMenuEl[i].classList.toggle('submenu-hide'); 
         })
-            
+
+        // close all other open submenus
+        // if this is not clicked and it has the class submenu-show, then close it
+        
     }
-    // close all other open submenus
-    // add code
+    
 }
 submenuToggle();
 
