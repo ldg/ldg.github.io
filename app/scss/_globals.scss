@@ -7,6 +7,9 @@
 html,body {
     color: $very-greyblue;
 }
+h1,h2,h3,h4 {
+    color: $very-darkblue;
+}
 h2 {
     font-size: 1.8rem;
 }
@@ -20,4 +23,10 @@ p {
     font-weight: 300;
     line-height: 1.5rem;
     margin-bottom: 2rem;
+}
+ul.menu li a {
+    color: $very-darkblue;
+}
+ul.submenu li a {
+    color: $very-greyblue;
 }
