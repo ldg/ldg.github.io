@@ -30,3 +30,23 @@ ul.menu li a {
 ul.submenu li a {
     color: $very-greyblue;
 }
+
+
+
+/* helper class to set visibility 
+on different screen sizes 
+.hide-on-mobile {
+
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+
+}
+
+.hide-on-desktop {
+
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+*/
