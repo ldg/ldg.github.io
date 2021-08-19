@@ -83,7 +83,7 @@ span.hamburger {
                 font-weight: 700;
                 padding: 0 .5rem;
                 text-decoration: none;
-                color: $very-greyblue;
+                color: $very-darkblue;
             }
             a.button {
                 background:linear-gradient(to right, $gradient-verylightred,$gradient-lightred);
@@ -92,6 +92,12 @@ span.hamburger {
                 color: $white;
             }
             
+        }
+        li.carat {
+            a {
+                color:$very-darkblue;
+                font-size: 1rem;
+            }
         }
 }
 
@@ -123,41 +129,77 @@ footer.footer {
     }
 }
 
-/* responsive */
+/*  - responsive - */
+/*large screens*/
+@media ( min-width: 1400px ) {
+    .mobile-menu-container {
+        display: flex;
+    }
+}
+
+/* medium screens */
 @media( min-width: 1024px ){
     .hide-on-desktop {
         display: none;
     }
     .mobile-menu-container {
         background: transparent;
-        display: initial;
-    }
-    nav.header-menu .menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        margin-right: auto;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin-top: -1.2rem;
-        margin-left: 9rem;
+        margin-top: 0;
+        padding-top: 0;
+            ul.menu,
+            ul.login-menu {
+                li {
+                    a {
+                        color: $white;
+                        font-size: 1rem;
+                    }
+                }
+            }
     }
-    nav.header-menu .login-menu {
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: none;
-        list-style: none;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: flex-end;
-        flex-direction: row;
+    nav.header-menu {
+        .menu {
+            display: flex;
+            margin-right: auto;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-top: -1.2rem;
+            margin-left: 9rem;
+                li {
+                    margin-top: 1.3rem;
+                }
+                .carat:after {
+                    color: $white;
+                }
+        }
+        .login-menu {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+            .sign-up {
+                color: $lightred;
+                background: $white;
+                white-space: nowrap;
+            }
+        }
     }
+    li.submenu-parent {
+        // position: relative;
+    }
+    ul.submenu.active {
+        background: transparent;
+        display: block;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+    }
+}
+
+/* small screens */
+@media( min-width: 414px ){
+
 }

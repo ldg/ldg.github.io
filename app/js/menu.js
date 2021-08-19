@@ -13,7 +13,9 @@ mobileMenuToggle.addEventListener('click', function(){
 
 /* toggle sub-menus */
 function submenuToggle (){
-    let submenu = this.nextElementSibling;
+    let submenuParent = this;
+    let submenu = submenuParent.nextElementSibling;
+    submenuParent.classList.toggle('submenu-parent');
     submenu.classList.toggle('active');
 }
 
@@ -27,15 +29,16 @@ for( let item of items  ) {
 // function closeSubmenu(e) {
    
 //     let submenus = mobileMenuContainer.querySelectorAll('.submenu');
+//     let isClickedInside = subMenu.contains(e.target);
+
 
 //     submenus.forEach( function(submenu){
-//         if(submenu.classList.contains('active') ){
-//             submenu.classList.remove('active');
+//         if(!isClickedInside && submenu.classList.contains('active') ){
+//             submenu.querySelector('active').classList.remove('active');
+//             // console.log(submenu);
 //         }
 //     })
     
 
-//     console.log('in the mobile menu container');
-
 //   }
-// mobileMenuContainer.addEventListener('click', closeSubmenu, false);
+// document.addEventListener('click', closeSubmenu, false);
