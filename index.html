@@ -9,7 +9,8 @@
   <title>Frontend Mentor | [Blogr]</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://kit.fontawesome.com/9ea7d0c6fa.js" crossorigin="anonymous"></script> 
   <link rel="stylesheet" href="css/main.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -20,45 +21,78 @@
 </head>
 <body>
 <header>
-  
-  <nav class="header-menu">
-    
-    <div class="mobile-menu-toggle hide-on-desktop">
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-    </div> 
-    <img src="img/logo.svg" class="logo" alt="Blogr">
-    <div class="mobile-menu-container">
-      <ul class="menu">
-        <li class="carat item has-submenu"><a href="#">Product</a></li>
-        <ul class="submenu">
-          <li class="sub-item"><a href="#">Overview</a></li>
-          <li class="sub-item"><a href="#">Pricing</a></li>
-          <li class="sub-item"><a href="#">Marketplace</a></li>
-          <li class="sub-item"><a href="#">Features</a></li>
-          <li class="sub-item"><a href="">Integrations</a></li>
-        </ul>
-        <li class="carat item has-submenu"><a href="#">Company</a></li>
-        <ul class="submenu">
-          <li class="sub-item"><a href="#">About</a></li>
-          <li class="sub-item"><a href="#">Team</a></li>
-          <li class="sub-item"><a href="#">Blog</a></li>
-          <li class="sub-item"><a href="#">Careers</a></li>
-        </ul>
-        <li class="carat item has-submenu"><a href="#">Connect</a></li>
-        <ul class="submenu">
-          <li class="sub-item"><a href="#">Contact</a></li>
-          <li class="sub-item"><a href="#">Newsletter</a></li>
-          <li class="sub-item"><a href="#">LinkedIn</a></li>
-        </ul>
-      </ul>
-      <ul class="login-menu">
-        <li><a href="#">Login</a></li>
-        <li><a class="button sign-up" href="#">Sign Up</a></li>
-      </ul>
-    </div>
-  </nav>
+  <img src="img/logo.svg" class="logo" alt="Blogr">
+  <nav id="main-nav">
+    <ul>
+        <li>
+            <a href="#">Product
+               <span class="arrow"><i class="fas fa-angle-down"></i></span>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Overview</a>
+                 </li>
+                 <li>
+                     <a href="#">Pricing</a>
+                  </li>
+                  <li>
+                     <a href="#">Marketplace</a>
+                  </li>
+                  <li>
+                     <a href="#">Features</a>
+                  </li>
+                  <li>
+                     <a href="#">Integrations</a>
+                  </li> 
+            </ul>
+         </li>
+        <li>
+            <a href="#">Company
+               <span class="arrow"><i class="fas fa-angle-down"></i></span>
+            </a>
+               <ul class="submenu">
+                  <li>
+                     <a href="#">About</a>
+                  </li>
+                  <li>
+                     <a href="#">Team</a>
+                  </li>
+                  <li>
+                     <a href="#">Blog</a>
+                  </li>
+                  <li>
+                     <a href="#">Careers</a>
+                  </li>
+               </ul>
+         </li> 
+        <li>
+            <a href="#">Connect
+               <span class="arrow"><i class="fas fa-angle-down"></i></span>
+            </a>
+               <ul class="submenu">
+                  <li>
+                     <a href="#">Contact</a>
+                  </li>
+                  <li>
+                     <a href="#">Newsletter</a>
+                  </li>
+                  <li>
+                     <a href="#">LinkedIn</a>
+                  </li>
+               </ul>
+         </li>
+     </ul>
+</nav> 
+<nav id="login-menu">
+  <ul>
+    <li>
+      <a href="#">Login</a>
+    </li>
+    <li>
+      <a class="button sign-up" href="#">Sign Up</a>
+    </li>
+  </ul>
+</nav>
   <div class="hero">
     <h1>A modern publishing platform</h1>
     <h2>Grow your audience and build your online brand</h2>

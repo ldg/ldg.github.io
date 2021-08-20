@@ -7,10 +7,12 @@ header{
     width: 100vw;
     color: $white;
     border-bottom-left-radius: 7rem;
+    padding-top: 2rem;
     .hero {
         padding:4rem 2rem 12rem 2rem;
         text-align: center;
         h1 {
+            font-family: $header-font-family;
             font-size: 2.4rem;
             font-weight: 600;
             line-height: 3rem;
@@ -18,6 +20,7 @@ header{
             color: $white;
         }
         h2 {
+            font-family: $header-font-family;
             font-size: 1.2rem;
             font-weight: 300;
             margin-bottom: 4rem;
@@ -26,14 +29,31 @@ header{
         .button {
             padding: .95rem 1.75rem;
             background: $white;
+            transition: background .4s;
             border-radius: 3.125rem;
             font-weight: 600;
         }
         .start-free {
             margin-right: 1rem;
+            color: $lightred;
+            text-decoration: none;
+        }
+        .start-free:hover{
+            background: $transparent-whitehover;
+            transition: background .4s;
         }
         .learn-more {
             background: transparent;
+            border: 1px solid $white;
+            color: $white;
+            transition: color .4s;
+            text-decoration: none;
+        }
+        .learn-more:hover {
+            background: $white;
+            transition: background .4s;
+            color: $lightred;
+            
         }
     }
 }

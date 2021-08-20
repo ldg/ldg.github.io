@@ -1,0 +1,105 @@
+nav#main-nav {
+    width: 45%;
+    margin-top: -.5rem;
+    a{
+        color: $white;
+        display: block;
+        font-family: $body-font-family;
+        font-weight: 300;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: color 0.4s;
+    }
+    a:hover {
+        color: $white-hover;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+    }
+    li {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        .submenu {
+            background: $white;
+            border-radius: .5rem;
+            width: 100%;
+            a {
+                color: $blackblue;
+                height: 3rem;
+                font-weight: 400;
+                span.arrow {
+                    margin-left: 0.3rem;
+                    font-size: 0.9rem;
+                }
+            }
+            a:hover {
+                font-weight: 700;
+            }
+        }
+    }
+    li:hover {
+        .submenu > li {
+            display: block;
+            top: 0px;
+        }
+    }
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    li {
+        display: none;
+        position: absolute;
+        top: 0px;
+    }
+}
+
+nav#login-menu {
+    width: 33%;
+    float: right;
+    margin-top: -4rem;
+    a{
+        color: $white;
+        display: block;
+        font-family: $body-font-family;
+        font-weight: 300;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: color 0.4s;
+    }
+    a:hover {
+        color: $white-hover;
+    }
+    a.button.sign-up {
+        background: $white;
+        transition: .4s;
+        border-radius: 4rem;
+        width: 8rem;
+        height: 2.5rem;
+        margin-top: .75rem;
+        color: $lightred;
+    }
+    a.button.sign-up:hover {
+        background: $transparent-whitehover;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+    }
+    li {
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+}

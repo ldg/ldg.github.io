@@ -160,6 +160,8 @@ footer.footer {
     nav.header-menu {
         .menu {
             display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
             margin-right: auto;
             flex-direction: row;
             justify-content: flex-start;
@@ -187,15 +189,16 @@ footer.footer {
             }
         }
     }
-    li.submenu-parent {
+    li.carat.item.has-submenu.submenu-parent {
         // position: relative;
     }
     ul.submenu.active {
         background: transparent;
-        display: block;
+        // display: block;
+        // width: 8rem;
+        // // margin-top: 2.875rem;
+        // // margin-left: -6.8125rem;
         // position: absolute;
-        // top: 0;
-        // left: 0;
     }
 }
 
