@@ -8,40 +8,12 @@ h3, p {
 }
 
 /* Utility classes */
-.show {
-  margin-top: 4rem;
-  opacity: 1;
-  -webkit-transition: margin-top 100ms ease-out;
-  transition: margin-top 100ms ease-out;
-  -webkit-transition: opacity 400ms ease-out;
-  transition: opacity 400ms ease-out;
-}
-
 .hide {
-  opacity: 0;
-  margin-top: -55rem;
-  -webkit-transition: opacity 200ms ease-out;
-  transition: opacity 200ms ease-out;
-  -webkit-transition: margin-top 400ms ease-out;
-  transition: margin-top 400ms ease-out;
-}
-
-.submenu-show {
-  display: block;
-  opacity: 1;
-  -webkit-transition: opacity 150ms ease-in;
-  transition: opacity 150ms ease-in;
-  background: #c8c8cb;
-  width: 100%;
-  border-radius: .5rem;
-  padding: .5rem;
-}
-
-.submenu-hide {
   display: none;
-  opacity: 0;
-  -webkit-transition: opacity 200ms ease-out;
-  transition: opacity 200ms ease-out;
+}
+
+.show {
+  display: block !important;
 }
 
 * {
@@ -147,6 +119,9 @@ nav#main-nav li .submenu {
   background: white;
   border-radius: .5rem;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav#main-nav li .submenu a {
@@ -167,6 +142,10 @@ nav#main-nav li .submenu a:hover {
 nav#main-nav li:hover .submenu > li {
   display: block;
   top: 0px;
+}
+
+span.arrow {
+  margin-left: .25rem;
 }
 
 .submenu {
@@ -243,6 +222,85 @@ nav#login-menu li {
   width: 100%;
   text-align: center;
   position: relative;
+}
+
+#mobilemenu-toggle {
+  display: none;
+}
+
+div#mobilemenu-container {
+  background: transparent;
+  margin: initial;
+  padding: initial;
+  border-radius: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/** RESPONSIVE **/
+@media only screen and (max-width: 60em) {
+  div#mobilemenu-container {
+    background: white;
+    margin: 4rem 2rem 2rem 2rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+    display: none;
+  }
+  nav#main-nav,
+  nav#login-menu {
+    display: inline-block;
+    width: 100%;
+  }
+  nav#main-nav ul,
+  nav#login-menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav#main-nav ul li a,
+  nav#login-menu ul li a {
+    color: #1f3f5b;
+  }
+  nav#main-nav ul li a span.arrow,
+  nav#login-menu ul li a span.arrow {
+    color: #ff525d;
+    margin-left: .25rem;
+  }
+  nav#main-nav li .submenu {
+    background: #f1f1f3;
+  }
+  nav#login-menu {
+    float: none;
+    margin-top: 0;
+    border-top: 1px solid #f1f1f3;
+    padding-top: .8rem;
+  }
+  a.button.sign-up {
+    margin: auto;
+    background: -webkit-gradient(linear, right top, left top, from(#ff8f70), to(#ff3d54)) !important;
+    background: linear-gradient(to left, #ff8f70, #ff3d54) !important;
+    color: white !important;
+  }
+  #mobilemenu-toggle {
+    height: 2rem;
+    width: 2rem;
+    float: right;
+    margin-right: 2rem;
+    display: initial;
+  }
+  span.hamburger {
+    height: 2px;
+    width: 100%;
+    background: white;
+    display: block;
+    margin-bottom: .3rem;
+  }
+  .submenu {
+    position: initial;
+  }
 }
 
 header {
