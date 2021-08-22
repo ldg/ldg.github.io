@@ -28,6 +28,7 @@ nav#main-nav {
             background: $white;
             border-radius: .5rem;
             width: 100%;
+            align-items: center;
             a {
                 color: $blackblue;
                 height: 3rem;
@@ -48,6 +49,10 @@ nav#main-nav {
             top: 0px;
         }
     }
+}
+
+span.arrow {
+    margin-left: .25rem;
 }
 
 .submenu {
@@ -101,5 +106,79 @@ nav#login-menu {
         width: 100%;
         text-align: center;
         position: relative;
+    }
+}
+#mobilemenu-toggle {
+    display: none;
+}
+div#mobilemenu-container {
+    background: transparent;
+    margin: initial;
+    padding: initial;
+    border-radius: none;
+    box-shadow: none;
+}
+
+/** RESPONSIVE **/
+@media only screen and (max-width: $breakpoint-tablet) {
+    div#mobilemenu-container {
+        background: $white;
+        margin: 4rem 2rem 2rem 2rem;
+        padding: 2rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 3rem rgba(0,0,0,.15);
+        display: none;
+    }
+   nav#main-nav,
+   nav#login-menu {
+       display: inline-block;
+       width: 100%;
+        ul {
+            flex-direction: column;
+            li {
+                a {
+                    color: $very-darkblue;
+                        span.arrow {
+                            color: $lightred;
+                            margin-left: .25rem;
+                        }
+                }
+            }
+        }
+   } 
+   nav#main-nav {
+       li {
+           .submenu {
+               background: $lightgrey;
+           }
+       }
+   }
+   nav#login-menu {
+       float: none;
+       margin-top: 0;
+       border-top: 1px solid $lightgrey;
+       padding-top: .8rem;
+   }
+   a.button.sign-up {
+    margin: auto;
+    background: linear-gradient(to left, $gradient-verylightred, $gradient-lightred)!important;
+    color: $white !important;
+    }
+   #mobilemenu-toggle {
+    height: 2rem;
+    width: 2rem;
+    float: right;
+    margin-right: 2rem;
+    display: initial;
+   }
+   span.hamburger {
+    height: 2px;
+    width: 100%;
+    background: $white;
+    display: block;
+    margin-bottom: .3rem;
+    }
+    .submenu {
+        position: initial;
     }
 }
