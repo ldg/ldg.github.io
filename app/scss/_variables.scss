@@ -25,12 +25,14 @@ $very-darkblue: hsl(208, 49%, 24%);
  $header-font-family:'Overpass', sans-serif;
  $body-font-family: 'Ubuntu', sans-serif;
 
- h1, h2,.button {
+ h1, h2,h3,.button {
     font-family: $header-font-family;
  }
- h3,p {
+ p {
     font-family: $body-font-family;
     font-weight: normal;
+    font-size: $font-size-body;
+    line-height: 1.5rem;
  }
 
  /* Utility classes */
@@ -39,6 +41,19 @@ $very-darkblue: hsl(208, 49%, 24%);
  }
  .show {
     display: block !important;
+ }
+ .rotate-right {
+    transform: rotate(45deg);
+    transform-origin: .5rem;
+    transition: transform .4s;
+ }
+ .rotate-left {
+    transform: rotate(-45deg);
+    transform-origin: .4rem;
+    transition: transform .4s;
+ }
+ .no-opacity {
+    opacity: 0;
  }
 //  .show{
 //     margin-top: 4rem;

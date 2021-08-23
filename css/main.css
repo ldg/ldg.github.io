@@ -1,10 +1,12 @@
-h1, h2, .button {
+h1, h2, h3, .button {
   font-family: "Overpass", sans-serif;
 }
 
-h3, p {
+p {
   font-family: "Ubuntu", sans-serif;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5rem;
 }
 
 /* Utility classes */
@@ -14,6 +16,32 @@ h3, p {
 
 .show {
   display: block !important;
+}
+
+.rotate-right {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: .5rem;
+          transform-origin: .5rem;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.rotate-left {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: .4rem;
+          transform-origin: .4rem;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+.no-opacity {
+  opacity: 0;
 }
 
 * {
@@ -313,7 +341,7 @@ header {
   width: 100vw;
   color: white;
   border-bottom-left-radius: 7rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 header .hero {
@@ -392,7 +420,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem 2rem;
 }
 
 section h2 {
@@ -405,9 +433,25 @@ section img {
 }
 
 section.dark {
-  background: #1f3f5b;
+  background: #2c2d3f url("/img/bg-pattern-circles.svg") no-repeat;
+  background-size: cover;
+  background-position-y: -12rem;
+  background-position-x: -6rem;
   border-top-right-radius: 4rem;
   border-bottom-left-radius: 4rem;
+  color: white;
+  padding: 4rem 3rem;
+}
+
+section.dark h3 {
+  color: white;
+  margin-top: 11rem;
+  font-size: 2.1rem;
+}
+
+img.mobile-phone-img {
+  max-width: 100%;
+  margin-bottom: -14rem;
 }
 
 footer {
