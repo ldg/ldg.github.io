@@ -13,9 +13,10 @@ header{
         text-align: center;
         h1 {
             font-family: $header-font-family;
-            font-size: 2.4rem;
+            font-size: 2.3rem;
             font-weight: 600;
             line-height: 3rem;
+            margin-top: 6rem;
             margin-bottom: 1.2rem;
             color: $white;
         }
@@ -32,6 +33,7 @@ header{
             transition: background .4s;
             border-radius: 3.125rem;
             font-weight: 600;
+            white-space: nowrap;
         }
         .start-free {
             margin-right: 1rem;
@@ -60,4 +62,24 @@ header{
 img.logo {
     float: left;
     margin-left: 2rem;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: $breakpoint-phone ) {
+    
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+    header {
+        .hero {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    } 
+    section#first-section {
+        h2 {
+            margin-left: -4rem;
+        }
+    }
 }

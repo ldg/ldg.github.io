@@ -351,9 +351,10 @@ header .hero {
 
 header .hero h1 {
   font-family: "Overpass", sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 600;
   line-height: 3rem;
+  margin-top: 6rem;
   margin-bottom: 1.2rem;
   color: white;
 }
@@ -373,6 +374,7 @@ header .hero .button {
   transition: background .4s;
   border-radius: 3.125rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 header .hero .start-free {
@@ -408,6 +410,16 @@ img.logo {
   margin-left: 2rem;
 }
 
+/* RESPONSIVE */
+@media screen and (min-width: 60em) {
+  header .hero h1 {
+    font-size: 3rem;
+  }
+  section#first-section h2 {
+    margin-left: -4rem;
+  }
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -432,6 +444,10 @@ section img {
   max-width: 100%;
 }
 
+section#first-section {
+  margin-bottom: 12rem;
+}
+
 section.dark {
   background: #2c2d3f url("/img/bg-pattern-circles.svg") no-repeat;
   background-size: cover;
@@ -441,6 +457,7 @@ section.dark {
   border-bottom-left-radius: 4rem;
   color: white;
   padding: 4rem 3rem;
+  position: relative;
 }
 
 section.dark h3 {
@@ -449,9 +466,66 @@ section.dark h3 {
   font-size: 2.1rem;
 }
 
-img.mobile-phone-img {
+section.dark img.mobile-phone-img {
   max-width: 100%;
-  margin-bottom: -14rem;
+  margin-bottom: 0;
+  position: absolute;
+  top: -12rem;
+}
+
+section#third-section .section-text-container {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 25.875em) {
+  section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  img.mobile-phone-img {
+    max-width: 100%;
+    margin-bottom: 0;
+    margin-top: -9rem;
+  }
+  section#first-section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-right: 0;
+    margin-right: -6rem;
+  }
+  section#first-section h2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  section#first-section .section-text-container {
+    width: 40%;
+  }
+  section#first-section .desktop-illustration {
+    width: 60%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  section#first-section {
+    margin-right: -8rem;
+  }
+  section.dark img.mobile-phone-img {
+    position: initial;
+  }
+  section#third-section img.laptop-img {
+    width: 80%;
+    margin-left: -21.6rem;
+  }
+  section#third-section .section-text-container {
+    text-align: left;
+    width: 33%;
+  }
 }
 
 footer {
