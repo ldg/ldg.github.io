@@ -378,7 +378,7 @@ header .hero .button {
 }
 
 header .hero .start-free {
-  margin-right: 1rem;
+  margin: 0 0.2rem;
   color: #ff525d;
   text-decoration: none;
 }
@@ -502,12 +502,18 @@ section#third-section .section-text-container {
   }
   section#first-section .section-text-container {
     width: 40%;
-  }
-  section#first-section .desktop-illustration {
-    width: 60%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  section#first-section picture {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 60%;
+  }
+  section#first-section picture img.desktop-illustration {
+    margin-right: -18rem;
   }
 }
 
@@ -530,6 +536,98 @@ section#third-section .section-text-container {
 
 footer {
   padding: 5rem 2rem;
-  background: #1f3f5b;
-  border-top-left-radius: 2rem;
+  background: #2c2d3f;
+  border-top-right-radius: 5rem;
+}
+
+nav.footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.footer-menu img.footer-logo {
+  margin-bottom: 4rem;
+}
+
+nav.footer-menu ul.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75%;
+}
+
+nav.footer-menu ul.menu li {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav.footer-menu ul.menu li a {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav.footer-menu ul.menu li a:hover {
+  -webkit-transition: border-bottom .4s;
+  transition: border-bottom .4s;
+  border-bottom: 1px solid white;
+}
+
+nav.footer-menu ul.menu ul.footer-submenu {
+  margin: 1.5rem auto;
+}
+
+nav.footer-menu ul.menu ul.footer-submenu li a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  line-height: 2rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.3rem;
+  color: white;
+  padding: .5rem;
+  border-radius: 2rem;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+}
+
+.attribution a {
+  color: white;
+}
+
+.attribution:hover {
+  background: #ffffff1a;
+}
+
+/* responsive */
+@media screen and (min-width: 25.875em) {
+  nav.footer-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav.footer-menu ul.menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }

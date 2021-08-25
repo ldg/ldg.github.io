@@ -14,6 +14,7 @@ section{
 }
 section#first-section {
     margin-bottom: 12rem;
+
 }
 section.dark {
     background: $gradient-darkgreyblue url('/img/bg-pattern-circles.svg') no-repeat;
@@ -31,12 +32,13 @@ section.dark {
         font-size: 2.1rem;
     }
     img.mobile-phone-img {
-        max-width: 100%;
-        margin-bottom: 0;
-        position: absolute;
-        top: -12rem;
-        // left: -1rem;
+    max-width: 100%;
+    margin-bottom: 0;
+    position: absolute;
+    top: -12rem;
+    // left: -1rem;
     }
+    
 }
 section#third-section {
     .section-text-container{
@@ -64,10 +66,14 @@ section#third-section {
         }
         .section-text-container {
             width: 40%;
-        }
-        .desktop-illustration {
-            width: 60%;
             order: 1;
+        }
+        picture {
+            order: 2;
+            width: 60%;
+            img.desktop-illustration {
+                margin-right: -18rem;
+            }
         }
     }
 }
