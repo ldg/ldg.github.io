@@ -16,9 +16,12 @@ $very-darkblue: hsl(208, 49%, 24%);
  $gradient-darkgreyblue: hsl(237, 17%, 21%);
  $gradient-darkdesaturatedblue: hsl(237, 23%, 32%);
 
- $breakpoint-phone: 25.875em;
- $breakpoint-tablet: 60em;
- $breakpoint-desktop: 90em;
+ $breakpoint-phone: 23.4375em; /* 375px */
+ $breakpoint-wide-phone: 25.875em; /* 414px */
+ $breakpoint-tablet: 60em; /* 960px */
+ $breakpoint-tablet-vert: 48em; /* 768px */
+ $breakpoint-tablet-horz: 64rem; /* 1024px */
+ $breakpoint-desktop: 90em; /* 1440px  */
 
  $font-size-body: 16px;
 

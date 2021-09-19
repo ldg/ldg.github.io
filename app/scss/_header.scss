@@ -63,23 +63,3 @@ img.logo {
     float: left;
     margin-left: 2rem;
 }
-
-/* RESPONSIVE */
-@media screen and (min-width: $breakpoint-phone ) {
-    
-}
-
-@media screen and (min-width: $breakpoint-tablet) {
-    header {
-        .hero {
-            h1 {
-                font-size: 3rem;
-            }
-        }
-    } 
-    section#first-section {
-        h2 {
-            margin-left: -4rem;
-        }
-    }
-}
