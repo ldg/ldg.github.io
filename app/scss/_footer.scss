@@ -56,13 +56,3 @@ nav.footer-menu {
 .attribution:hover {
     background: #ffffff1a;
 }
-
-/* responsive */
-@media screen and (min-width: $breakpoint-phone) {
-    nav.footer-menu {
-        flex-direction: row;
-        ul.menu {
-            flex-direction: row;
-        }
-    }
-}
