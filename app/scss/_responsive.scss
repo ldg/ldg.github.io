@@ -40,8 +40,40 @@
 }
 
 @media screen and (min-width: $breakpoint-tablet-vert){
+    header {
+        img.logo {
+            margin-left: 5rem;
+        }
+        #mobilemenu-toggle {
+            margin-right: 3rem;
+        }
+    }
+    section#first-section{
+        .section-text-container {
+            width: 80%;
+            margin-left: 2rem;
+        }
+    }
     .dark-text-container {
         margin-top: 7rem;
+        width: 80%;
+    }
+    section#third-section {
+        .section-text-container {
+            width: 80%;
+        }
+    }
+    footer.footer {
+        nav.footer-menu {
+            ul.menu {
+                flex-direction: row;
+                width: 80%;
+                margin-left: 4rem;
+                ul.footer-submenu {
+                    margin: 1.5rem auto 1.5rem -4rem;
+                }
+            }
+        }
     }
 }
 
@@ -55,13 +87,18 @@
         }
     } 
     section#first-section {
+        flex-direction: row;
         margin-right: -8px;
         h2 {
             margin-left: -4rem;
         }
+        .section-text-container {
+            width: 50%;
+            order: 1;
+        }
         picture {
             order: 2;
-            width: 60%;
+            width: 50%;
             img.desktop-illustration {
                 margin-right: 0;
             }
@@ -86,13 +123,71 @@
     }
 }
 
-@media screen and (min-width: $breakpoint-tablet-horz){ 
-    .dark-text-container {
-        width: 33%;
+@media screen and (min-width: $breakpoint-tablet-horz){
+    header {
+        img.logo {
+            margin-left: 7rem;
+        }
+        #mobilemenu-container {
+            nav#main-nav {
+                width: 53%;
+            }
+            nav#login-menu {
+                margin-right: 4rem;
+            }
+        }
     }
+    section#first-section {
+        margin-right: 0;
+        h2 {
+            margin: 2rem 0 1rem 0;
+        }
+        picture {
+            img.desktop-illustration {
+                margin-right: -19rem;
+            }
+        }
+        .section-text-container {
+            width: 40%;
+            margin-top: 3rem;
+            margin-left: 6rem;
+        }
+    }
+    
     section.dark {
         flex-direction: row;
         justify-content: space-between;
+        padding: 0rem 3rem;
+            .dark-text-container {
+                margin-top: -10rem;
+                width: 40%;
+            }
+            img.mobile-phone-img {
+                margin-top: -4rem;
+            }
     }
 
+    section#third-section {
+        flex-direction: row;
+            picture {
+                img.laptop-img {
+                    width: 100%;
+                    margin-left: -24.6rem;
+                }
+            }
+    }
+
+    footer.footer {
+        nav.footer-menu {
+            ul.menu{
+                width: 90%;
+                margin-left: 11rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: $breakpoint-desktop){ 
+   
 }

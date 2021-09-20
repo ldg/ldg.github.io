@@ -449,8 +449,8 @@ section.dark {
   background-size: cover;
   background-position-y: -12rem;
   background-position-x: -6rem;
-  border-top-right-radius: 4rem;
-  border-bottom-left-radius: 4rem;
+  border-top-right-radius: 8rem;
+  border-bottom-left-radius: 8rem;
   color: white;
   padding: 4rem 3rem;
   position: relative;
@@ -476,7 +476,7 @@ section#third-section .section-text-container {
 footer {
   padding: 5rem 2rem;
   background: #2c2d3f;
-  border-top-right-radius: 5rem;
+  border-top-right-radius: 8rem;
 }
 
 nav.footer-menu {
@@ -606,8 +606,33 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
 }
 
 @media screen and (min-width: 48em) {
+  header img.logo {
+    margin-left: 5rem;
+  }
+  header #mobilemenu-toggle {
+    margin-right: 3rem;
+  }
+  section#first-section .section-text-container {
+    width: 80%;
+    margin-left: 2rem;
+  }
   .dark-text-container {
     margin-top: 7rem;
+    width: 80%;
+  }
+  section#third-section .section-text-container {
+    width: 80%;
+  }
+  footer.footer nav.footer-menu ul.menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 80%;
+    margin-left: 4rem;
+  }
+  footer.footer nav.footer-menu ul.menu ul.footer-submenu {
+    margin: 1.5rem auto 1.5rem -4rem;
   }
 }
 
@@ -616,16 +641,26 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
     font-size: 3rem;
   }
   section#first-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-right: -8px;
   }
   section#first-section h2 {
     margin-left: -4rem;
   }
+  section#first-section .section-text-container {
+    width: 50%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
   section#first-section picture {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    width: 60%;
+    width: 50%;
   }
   section#first-section picture img.desktop-illustration {
     margin-right: 0;
@@ -648,8 +683,28 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
 }
 
 @media screen and (min-width: 64rem) {
-  .dark-text-container {
-    width: 33%;
+  header img.logo {
+    margin-left: 7rem;
+  }
+  header #mobilemenu-container nav#main-nav {
+    width: 53%;
+  }
+  header #mobilemenu-container nav#login-menu {
+    margin-right: 4rem;
+  }
+  section#first-section {
+    margin-right: 0;
+  }
+  section#first-section h2 {
+    margin: 2rem 0 1rem 0;
+  }
+  section#first-section picture img.desktop-illustration {
+    margin-right: -19rem;
+  }
+  section#first-section .section-text-container {
+    width: 40%;
+    margin-top: 3rem;
+    margin-left: 6rem;
   }
   section.dark {
     -webkit-box-orient: horizontal;
@@ -659,5 +714,27 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 0rem 3rem;
+  }
+  section.dark .dark-text-container {
+    margin-top: -10rem;
+    width: 40%;
+  }
+  section.dark img.mobile-phone-img {
+    margin-top: -4rem;
+  }
+  section#third-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section#third-section picture img.laptop-img {
+    width: 100%;
+    margin-left: -24.6rem;
+  }
+  footer.footer nav.footer-menu ul.menu {
+    width: 90%;
+    margin-left: 11rem;
   }
 }
