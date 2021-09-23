@@ -18,19 +18,28 @@ section#first-section {
 }
 section.dark {
     background: $gradient-darkgreyblue url('/img/bg-pattern-circles.svg') no-repeat;
-    background-size: cover;
-    background-position-y: -12rem;
-    background-position-x: -6rem;
+    background-size: 59rem;
+    background-position-y: -30rem !important;
+    background-position-x: -12rem !important; 
     border-top-right-radius: 8rem;
     border-bottom-left-radius: 8rem;
     color: $white;
     padding: 4rem 3rem;
     position: relative;
-    h3 {
-        color: $white;
-        margin-top: 11rem;
-        font-size: 2.1rem;
+    .dark-text-container {
+        text-align: left;
+        width: 57%;
+        h3 {
+            color: $white;
+            margin-top: 11rem;
+            font-size: 2.1rem;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.9rem;
+        }
     }
+    
     img.mobile-phone-img {
     max-width: 100%;
     margin-bottom: 0;
@@ -41,6 +50,11 @@ section.dark {
     
 }
 section#third-section {
+    picture {
+        img.laptop-img {
+            
+        }
+    }
     .section-text-container{
         width: 100%;
     }

@@ -341,9 +341,9 @@ header {
   background: url("/img/bg-pattern-intro.svg"), -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background: url("/img/bg-pattern-intro.svg"), linear-gradient(#ff8f70, #ff3d54);
   background-repeat: no-repeat;
-  background-position-x: 36%;
-  background-position-y: 37%;
-  background-size: 400vw;
+  background-position-x: 28%;
+  background-position-y: 53%;
+  background-size: 208rem;
   width: 100vw;
   color: white;
   border-bottom-left-radius: 7rem;
@@ -446,9 +446,9 @@ section#first-section {
 
 section.dark {
   background: #2c2d3f url("/img/bg-pattern-circles.svg") no-repeat;
-  background-size: cover;
-  background-position-y: -12rem;
-  background-position-x: -6rem;
+  background-size: 59rem;
+  background-position-y: -30rem !important;
+  background-position-x: -12rem !important;
   border-top-right-radius: 8rem;
   border-bottom-left-radius: 8rem;
   color: white;
@@ -456,10 +456,20 @@ section.dark {
   position: relative;
 }
 
-section.dark h3 {
+section.dark .dark-text-container {
+  text-align: left;
+  width: 57%;
+}
+
+section.dark .dark-text-container h3 {
   color: white;
   margin-top: 11rem;
   font-size: 2.1rem;
+}
+
+section.dark .dark-text-container p {
+  font-size: 1rem;
+  line-height: 1.9rem;
 }
 
 section.dark img.mobile-phone-img {
@@ -736,5 +746,12 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   footer.footer nav.footer-menu ul.menu {
     width: 90%;
     margin-left: 11rem;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  section.dark img.mobile-phone-img {
+    margin-bottom: -7rem;
+    margin-left: 2rem;
   }
 }

@@ -189,5 +189,8 @@
 }
 
 @media screen and (min-width: $breakpoint-desktop){ 
-   
+    section.dark img.mobile-phone-img {
+        margin-bottom: -7rem;
+        margin-left: 2rem;
+    }
 }
