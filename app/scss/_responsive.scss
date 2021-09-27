@@ -142,9 +142,10 @@
         h2 {
             margin: 2rem 0 1rem 0;
         }
-        picture {
-            img.desktop-illustration {
-                margin-right: -19rem;
+        .illustration {
+            width: 31rem;
+            img {
+                margin-right: -17rem;
             }
         }
         .section-text-container {
@@ -189,6 +190,16 @@
 }
 
 @media screen and (min-width: $breakpoint-desktop){ 
+    section#first-section {
+        .illustration {
+            overflow-x: hidden;
+            width: 45rem;
+            margin-top: -6rem;
+                img.desktop-illustration {
+                    margin-right: -24rem;
+                }
+        }
+    }
     section.dark img.mobile-phone-img {
         margin-bottom: -7rem;
         margin-left: 2rem;

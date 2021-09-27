@@ -13,7 +13,20 @@ section{
     }
 }
 section#first-section {
+    flex-direction: row-reverse !important;
     margin-bottom: 12rem;
+    padding-right: 0px;
+    h2 {
+        font-size: 2rem;
+    }
+    .illustration {
+        overflow-x: hidden;
+        width: 45rem;
+        margin-top: -6rem;
+            img.desktop-illustration {
+                margin-right: -24rem;
+            }
+    }
 
 }
 section.dark {
