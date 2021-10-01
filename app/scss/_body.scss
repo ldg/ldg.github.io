@@ -1,6 +1,5 @@
 section{
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 4rem 2rem 2rem 2rem;
@@ -13,19 +12,19 @@ section{
     }
 }
 section#first-section {
-    flex-direction: row-reverse !important;
-    margin-bottom: 12rem;
+    justify-content: center;
+    // margin-bottom: 12rem;
     padding-right: 0px;
     h2 {
         font-size: 2rem;
     }
     .illustration {
-        overflow-x: hidden;
+        overflow-x: visible;
         width: 45rem;
         margin-top: -6rem;
-            img.desktop-illustration {
-                margin-right: -24rem;
-            }
+            // img.desktop-illustration {
+            //     margin-right: -24rem;
+            // }
     }
 
 }
@@ -38,7 +37,8 @@ section.dark {
     border-bottom-left-radius: 8rem;
     color: $white;
     padding: 4rem 3rem;
-    position: relative;
+    // position: relative;
+    justify-content: center;
     .dark-text-container {
         text-align: left;
         width: 57%;
@@ -54,19 +54,19 @@ section.dark {
     }
     
     img.mobile-phone-img {
-    max-width: 100%;
+    // max-width: 100%;
     margin-bottom: 0;
-    position: absolute;
-    top: -12rem;
+    // position: absolute;
+    // top: -12rem;
     // left: -1rem;
     }
     
 }
 section#third-section {
-    picture {
-        img.laptop-img {
-            
-        }
+    justify-content: center;
+    img.laptop-img {
+        width: 66%;
+        margin-left: -21rem;
     }
     .section-text-container{
         width: 100%;

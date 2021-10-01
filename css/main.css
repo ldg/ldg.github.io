@@ -4,6 +4,7 @@
 /* 768px */
 /* 1024px */
 /* 1440px  */
+/* 1441px */
 h1, h2, h3, .button {
   font-family: "Overpass", sans-serif;
 }
@@ -420,10 +421,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -441,11 +438,9 @@ section img {
 }
 
 section#first-section {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: reverse !important;
-      -ms-flex-direction: row-reverse !important;
-          flex-direction: row-reverse !important;
-  margin-bottom: 12rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-right: 0px;
 }
 
@@ -454,13 +449,9 @@ section#first-section h2 {
 }
 
 section#first-section .illustration {
-  overflow-x: hidden;
+  overflow-x: visible;
   width: 45rem;
   margin-top: -6rem;
-}
-
-section#first-section .illustration img.desktop-illustration {
-  margin-right: -24rem;
 }
 
 section.dark {
@@ -472,7 +463,9 @@ section.dark {
   border-bottom-left-radius: 8rem;
   color: white;
   padding: 4rem 3rem;
-  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section.dark .dark-text-container {
@@ -492,10 +485,18 @@ section.dark .dark-text-container p {
 }
 
 section.dark img.mobile-phone-img {
-  max-width: 100%;
   margin-bottom: 0;
-  position: absolute;
-  top: -12rem;
+}
+
+section#third-section {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#third-section img.laptop-img {
+  width: 66%;
+  margin-left: -21rem;
 }
 
 section#third-section .section-text-container {
@@ -504,7 +505,7 @@ section#third-section .section-text-container {
 
 footer {
   padding: 5rem 2rem;
-  background: #2c2d3f;
+  background: #25252d;
   border-top-right-radius: 8rem;
 }
 
@@ -586,6 +587,12 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
 
 /* RESPONSIVE */
 @media screen and (min-width: 23.4375em) {
+  section#first-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
   section.dark {
     background-position-y: -16.5rem;
     background-position-x: -7.5rem;
@@ -597,28 +604,53 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  img.mobile-phone-img {
-    max-width: 100%;
-    margin-bottom: 0;
-    margin-top: -9rem;
-  }
   section#first-section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: 0;
+    padding: 0;
+    margin-bottom: 20rem;
   }
   section#first-section h2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    margin-bottom: 5rem;
+  }
+  section#first-section .illustration {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   section#first-section .section-text-container {
-    width: 100%;
+    width: 90%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
+  section.dark {
+    padding-left: 0;
+    padding-right: 0;
+  }
   section.dark img.mobile-phone-img {
-    top: -3rem;
+    margin-top: -17rem;
+  }
+  section.dark .dark-text-container {
+    width: 90%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section.dark .dark-text-container h3 {
+    margin-top: 0;
+  }
+  section#third-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section#third-section .section-text-container {
+    width: 90%;
+  }
+  section#third-section img.laptop-img {
+    width: 100%;
+    margin: 0;
   }
   nav.footer-menu {
     -webkit-box-orient: vertical;
@@ -641,13 +673,29 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   header #mobilemenu-toggle {
     margin-right: 3rem;
   }
+  section#first-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section#first-section .illustration {
+    width: 38rem;
+  }
   section#first-section .section-text-container {
     width: 80%;
     margin-left: 2rem;
   }
-  .dark-text-container {
-    margin-top: 7rem;
+  section.dark .dark-text-container {
+    margin-top: 0rem;
+    width: 90%;
+  }
+  section.dark .dark-text-container h3 {
+    margin-top: 0;
+  }
+  section#third-section img.laptop-img {
     width: 80%;
+    margin-left: 0;
   }
   section#third-section .section-text-container {
     width: 80%;
@@ -665,53 +713,13 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   }
 }
 
-@media screen and (min-width: 60em) {
-  header .hero h1 {
-    font-size: 3rem;
-  }
-  section#first-section {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-right: -8px;
-  }
-  section#first-section h2 {
-    margin-left: -4rem;
-  }
-  section#first-section .section-text-container {
-    width: 50%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  section#first-section picture {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    width: 50%;
-  }
-  section#first-section picture img.desktop-illustration {
-    margin-right: 0;
-  }
-  section.dark {
+@media screen and (min-width: 64rem) {
+  h3 {
     width: 100%;
   }
-  section.dark img.mobile-phone-img {
-    position: initial;
-    top: -10rem;
+  p {
+    padding-left: 1rem;
   }
-  section#third-section img.laptop-img {
-    width: 80%;
-    margin-left: -21.6rem;
-  }
-  section#third-section .section-text-container {
-    text-align: left;
-    width: 33%;
-  }
-}
-
-@media screen and (min-width: 64rem) {
   header img.logo {
     margin-left: 7rem;
   }
@@ -722,21 +730,29 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
     margin-right: 4rem;
   }
   section#first-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     margin-right: 0;
+    margin-bottom: 5rem;
   }
   section#first-section h2 {
-    margin: 2rem 0 1rem 0;
+    margin: 6rem 0 1rem 0;
   }
   section#first-section .illustration {
-    width: 31rem;
+    width: 38rem;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
   }
   section#first-section .illustration img {
-    margin-right: -17rem;
+    margin-right: -21rem;
   }
   section#first-section .section-text-container {
     width: 40%;
     margin-top: 3rem;
-    margin-left: 6rem;
+    margin-left: 0;
   }
   section.dark {
     -webkit-box-orient: horizontal;
@@ -749,11 +765,12 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
     padding: 0rem 3rem;
   }
   section.dark .dark-text-container {
-    margin-top: -10rem;
+    margin-top: 0rem;
     width: 40%;
   }
   section.dark img.mobile-phone-img {
     margin-top: -4rem;
+    margin-bottom: -6rem;
   }
   section#third-section {
     -webkit-box-orient: horizontal;
@@ -761,13 +778,23 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  section#third-section picture img.laptop-img {
-    width: 100%;
-    margin-left: -24.6rem;
+  section#third-section img.laptop-img {
+    width: 73%;
+    margin-left: -19rem;
+  }
+  section#third-section .section-text-container {
+    width: 50%;
+    margin: 10rem 0;
   }
   footer.footer nav.footer-menu ul.menu {
     width: 90%;
     margin-left: 11rem;
+  }
+}
+
+@media screen and (min-width: 1194px) {
+  section#third-section img.laptop-img {
+    width: 75%;
   }
 }
 
@@ -783,5 +810,31 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   section.dark img.mobile-phone-img {
     margin-bottom: -7rem;
     margin-left: 2rem;
+  }
+  section#third-section .section-text-container {
+    width: 50%;
+  }
+  section#third-section img.laptop-img {
+    width: 73%;
+    margin-left: -21rem;
+  }
+}
+
+@media screen and (min-width: 90.0625em) {
+  section#first-section .illustration {
+    overflow-x: visible;
+  }
+  section.dark {
+    padding: 4rem 8rem;
+  }
+  section.dark img.mobile-phone-img {
+    margin-top: -8rem;
+    margin-bottom: -11rem;
+  }
+  section.dark .dark-text-container {
+    width: 48%;
+  }
+  section#third-section img.laptop-img {
+    width: 66%;
   }
 }

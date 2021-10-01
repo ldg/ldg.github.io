@@ -1,5 +1,8 @@
 /* RESPONSIVE */
 @media screen and (min-width: $breakpoint-phone) {
+    section#first-section {
+        flex-direction: column-reverse;
+    }
     section.dark {
         background-position-y: -16.5rem;
         background-position-x: -7.5rem;
@@ -10,25 +13,56 @@
     section {
         flex-wrap: wrap;
     }
-    img.mobile-phone-img {
-        max-width: 100%;
-        margin-bottom: 0;
-        margin-top: -9rem;
-    }
+    // img.mobile-phone-img {
+    //     max-width: 100%;
+    //     margin-bottom: 0;
+    //     margin-top: -9rem;
+    // }
     section#first-section {
         flex-wrap: wrap;
-        margin-right: 0;
+        padding: 0;
+        margin-bottom: 20rem;
         h2{
             flex-basis: 100%;
+            margin-bottom: 5rem;
+        }
+        .illustration {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
         .section-text-container {
-            width: 100%;
+            width: 90%;
             order: 1;
         }
     }
 
-    section.dark img.mobile-phone-img {
-        top: -3rem;
+    section.dark {
+        padding-left: 0;
+        padding-right: 0;
+        img.mobile-phone-img {
+            margin-top: -17rem;
+        }
+        .dark-text-container {
+            width:90%;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+            h3 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    section#third-section {
+        padding-left: 0;
+        padding-right: 0;
+        .section-text-container{
+            width: 90%;
+        }
+        img.laptop-img {
+            width: 100%;
+            margin: 0;
+        }
     }
 
     nav.footer-menu {
@@ -49,16 +83,30 @@
         }
     }
     section#first-section{
+        flex-direction: column;
+        .illustration {
+            width: 38rem;
+        }
         .section-text-container {
             width: 80%;
             margin-left: 2rem;
         }
     }
-    .dark-text-container {
-        margin-top: 7rem;
-        width: 80%;
+    section.dark {
+        .dark-text-container {
+            margin-top: 0rem;
+            width: 90%;
+            h3 {
+                margin-top: 0;
+            }
+        }
     }
+    
     section#third-section {
+        img.laptop-img {
+            width: 80%;
+        margin-left: 0;
+        }
         .section-text-container {
             width: 80%;
         }
@@ -77,53 +125,13 @@
     }
 }
 
-
-@media screen and (min-width: $breakpoint-tablet){
-    header {
-        .hero {
-            h1 {
-                font-size: 3rem;
-            }
-        }
-    } 
-    section#first-section {
-        flex-direction: row;
-        margin-right: -8px;
-        h2 {
-            margin-left: -4rem;
-        }
-        .section-text-container {
-            width: 50%;
-            order: 1;
-        }
-        picture {
-            order: 2;
-            width: 50%;
-            img.desktop-illustration {
-                margin-right: 0;
-            }
-        }
-    }
-    section.dark {
-        width: 100%;
-        img.mobile-phone-img {
-            position: initial;
-            top: -10rem;
-        }
-    }
-    section#third-section {
-        img.laptop-img {
-            width: 80%;
-            margin-left: -21.6rem;
-        }
-        .section-text-container {
-            text-align: left;
-            width: 33%;
-        }
-    }
-}
-
 @media screen and (min-width: $breakpoint-tablet-horz){
+    h3 {
+        width: 100%;
+    }
+    p {
+        padding-left: 1rem;
+    }
     header {
         img.logo {
             margin-left: 7rem;
@@ -138,20 +146,25 @@
         }
     }
     section#first-section {
+        flex-direction: row-reverse;
         margin-right: 0;
+        margin-bottom: 5rem;
         h2 {
-            margin: 2rem 0 1rem 0;
+            margin: 6rem 0 1rem 0;
         }
         .illustration {
-            width: 31rem;
+            width: 38rem;
+            margin-left: 0;
+            margin-right: 0;
+            overflow: hidden;
             img {
-                margin-right: -17rem;
+                margin-right: -21rem;
             }
         }
         .section-text-container {
             width: 40%;
             margin-top: 3rem;
-            margin-left: 6rem;
+            margin-left: 0;
         }
     }
     
@@ -160,21 +173,24 @@
         justify-content: space-between;
         padding: 0rem 3rem;
             .dark-text-container {
-                margin-top: -10rem;
+                margin-top: 0rem;
                 width: 40%;
             }
             img.mobile-phone-img {
                 margin-top: -4rem;
+                margin-bottom: -6rem;
             }
     }
 
     section#third-section {
         flex-direction: row;
-            picture {
-                img.laptop-img {
-                    width: 100%;
-                    margin-left: -24.6rem;
-                }
+           img.laptop-img {
+                width: 73%;
+                margin-left: -19rem;;
+            }
+            .section-text-container {
+                width: 50%;
+                margin: 10rem 0;
             }
     }
 
@@ -187,6 +203,14 @@
         }
     }
 
+}
+
+@media screen and ( min-width: 1194px ) {
+    section#third-section {
+        img.laptop-img {
+            width: 75%;
+        }
+    }
 }
 
 @media screen and (min-width: $breakpoint-desktop){ 
@@ -203,5 +227,37 @@
     section.dark img.mobile-phone-img {
         margin-bottom: -7rem;
         margin-left: 2rem;
+    }
+    section#third-section {
+        .section-text-container{
+            width: 50%;
+        }
+        img.laptop-img{
+            width: 73%;
+            margin-left: -21rem;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-wide-desktop) {
+    section#first-section {
+        .illustration {
+            overflow-x: visible;
+        }
+    } 
+    section.dark {
+        padding: 4rem 8rem;
+        img.mobile-phone-img {
+            margin-top: -8rem;
+            margin-bottom: -11rem;
+        }
+        .dark-text-container {
+            width: 48%;
+        }
+    }
+    section#third-section {
+        img.laptop-img {
+            width: 66%;
+        }
     }
 }
