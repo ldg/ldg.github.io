@@ -28,8 +28,8 @@ p {
 .rotate-right {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transform-origin: .5rem;
-          transform-origin: .5rem;
+  -webkit-transform-origin: .4rem;
+          transform-origin: .4rem;
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   transition: transform .4s;
@@ -72,7 +72,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   width: 88%;
 }
 
@@ -361,7 +361,7 @@ header .hero h1 {
   font-size: 2.3rem;
   font-weight: 600;
   line-height: 3rem;
-  margin-top: 6rem;
+  margin-top: 3rem;
   margin-bottom: 1.2rem;
   color: white;
 }
@@ -431,10 +431,6 @@ section {
 section h2 {
   margin-top: 5rem;
   text-align: center;
-}
-
-section img {
-  max-width: 100%;
 }
 
 section#first-section {
@@ -587,26 +583,18 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
 
 /* RESPONSIVE */
 @media screen and (min-width: 23.4375em) {
-  section#first-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  section.dark {
-    background-position-y: -16.5rem;
-    background-position-x: -7.5rem;
-  }
-}
-
-@media screen and (min-width: 25.875em) {
   section {
+    overflow: hidden;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   section#first-section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0;
     margin-bottom: 20rem;
   }
@@ -618,6 +606,7 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   section#first-section .illustration {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    width: 90%;
   }
   section#first-section .section-text-container {
     width: 90%;
@@ -626,8 +615,11 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
             order: 1;
   }
   section.dark {
+    background-position-y: -16.5rem;
+    background-position-x: -7.5rem;
     padding-left: 0;
     padding-right: 0;
+    overflow: visible;
   }
   section.dark img.mobile-phone-img {
     margin-top: -17rem;
@@ -680,7 +672,7 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
             flex-direction: column;
   }
   section#first-section .illustration {
-    width: 38rem;
+    width: 100%;
   }
   section#first-section .section-text-container {
     width: 80%;
@@ -742,17 +734,22 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   }
   section#first-section .illustration {
     width: 38rem;
-    margin-left: 0;
-    margin-right: 0;
-    overflow: hidden;
+    margin-left: -7rem;
+    margin-right: -7rem;
+    overflow: visible;
   }
   section#first-section .illustration img {
     margin-right: -21rem;
+    width: 115%;
   }
   section#first-section .section-text-container {
-    width: 40%;
-    margin-top: 3rem;
+    width: 50%;
+    margin-top: 0;
     margin-left: 0;
+    text-align: left;
+  }
+  section#first-section .section-text-container p {
+    padding-left: 0;
   }
   section.dark {
     -webkit-box-orient: horizontal;
@@ -767,6 +764,10 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   section.dark .dark-text-container {
     margin-top: 0rem;
     width: 40%;
+    text-align: left;
+  }
+  section.dark .dark-text-container p {
+    padding-left: 0;
   }
   section.dark img.mobile-phone-img {
     margin-top: -4rem;
@@ -778,13 +779,21 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  section#third-section img.laptop-img {
-    width: 73%;
-    margin-left: -19rem;
+  section#third-section picture {
+    width: 60%;
+    margin-left: -8rem;
   }
   section#third-section .section-text-container {
-    width: 50%;
-    margin: 10rem 0;
+    width: 40%;
+    text-align: left;
+    margin-right: 7.5rem;
+  }
+  section#third-section .section-text-container p {
+    padding-left: 0;
+  }
+  section#third-section img.laptop-img {
+    width: 100%;
+    margin-left: -7rem;
   }
   footer.footer nav.footer-menu ul.menu {
     width: 90%;
@@ -800,29 +809,28 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
 
 @media screen and (min-width: 90em) {
   section#first-section .illustration {
-    overflow-x: hidden;
+    overflow-x: visible;
     width: 45rem;
     margin-top: -6rem;
   }
   section#first-section .illustration img.desktop-illustration {
     margin-right: -24rem;
   }
+  section#first-section .section-text-container {
+    margin-top: -6rem;
+  }
   section.dark img.mobile-phone-img {
     margin-bottom: -7rem;
     margin-left: 2rem;
   }
-  section#third-section .section-text-container {
+  section.dark .dark-text-container {
     width: 50%;
-  }
-  section#third-section img.laptop-img {
-    width: 73%;
-    margin-left: -21rem;
   }
 }
 
 @media screen and (min-width: 90.0625em) {
   section#first-section .illustration {
-    overflow-x: visible;
+    overflow: visible;
   }
   section.dark {
     padding: 4rem 8rem;
@@ -830,9 +838,6 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   section.dark img.mobile-phone-img {
     margin-top: -8rem;
     margin-bottom: -11rem;
-  }
-  section.dark .dark-text-container {
-    width: 48%;
   }
   section#third-section img.laptop-img {
     width: 66%;

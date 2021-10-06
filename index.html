@@ -119,8 +119,12 @@
       </p>
     </div>
     <div class="illustration">
-      <img class="desktop-illustration" src="img/illustration-editor-desktop.svg"
-      srcset="img/illustration-editor-mobile.svg 414w, img/illustration-editor-desktop.svg 1440w" alt="Editor Illustration">
+      <!-- <img class="desktop-illustration" src="img/illustration-editor-mobile.svg"
+      srcset="img/illustration-editor-mobile.svg 406w, img/illustration-editor-desktop.svg 925w" alt="Editor Illustration"> -->
+      <picture>
+        <source srcset="img/illustration-editor-desktop.svg" media="(min-width: 768px)"/>
+        <img class="desktop-illustration" src="img/illustration-editor-mobile.svg" alt="Editor Illustration" />
+      </picture>
     </div>
     
   </section>
@@ -139,8 +143,12 @@
 
 
   <section id="third-section">
-      <img src="img/illustration-laptop-desktop.svg" 
-      srcset="img/illustration-editor-mobile.svg 414w, img/illustration-laptop-desktop.svg 1440w" class="laptop-img" alt="Laptop">
+      <!-- <img src="img/illustration-laptop-desktop.svg" 
+      srcset="img/illustration-editor-mobile.svg 414w, img/illustration-laptop-desktop.svg 1440w" class="laptop-img" alt="Laptop"> -->
+      <picture>
+        <source srcset="img/illustration-laptop-desktop.svg" media="(min-width: 768px)" />
+        <img class="laptop-img" src="img/illustration-laptop-mobile.svg" alt="Laptop">
+      </picture>
     <div class="section-text-container">
       <h3>Free, open, simple</h3>
       <p>

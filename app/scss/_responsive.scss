@@ -1,25 +1,12 @@
 /* RESPONSIVE */
 @media screen and (min-width: $breakpoint-phone) {
-    section#first-section {
-        flex-direction: column-reverse;
-    }
-    section.dark {
-        background-position-y: -16.5rem;
-        background-position-x: -7.5rem;
-    }
-}
-
-@media screen and (min-width: $breakpoint-wide-phone) {
     section {
+        overflow: hidden;
         flex-wrap: wrap;
     }
-    // img.mobile-phone-img {
-    //     max-width: 100%;
-    //     margin-bottom: 0;
-    //     margin-top: -9rem;
-    // }
     section#first-section {
         flex-wrap: wrap;
+        flex-direction: column;
         padding: 0;
         margin-bottom: 20rem;
         h2{
@@ -29,16 +16,19 @@
         .illustration {
             padding-top: 3rem;
             padding-bottom: 3rem;
+            width: 90%;
         }
         .section-text-container {
             width: 90%;
             order: 1;
         }
     }
-
     section.dark {
+        background-position-y: -16.5rem;
+        background-position-x: -7.5rem;
         padding-left: 0;
         padding-right: 0;
+        overflow: visible;
         img.mobile-phone-img {
             margin-top: -17rem;
         }
@@ -85,7 +75,7 @@
     section#first-section{
         flex-direction: column;
         .illustration {
-            width: 38rem;
+            width: 100%;
         }
         .section-text-container {
             width: 80%;
@@ -154,17 +144,22 @@
         }
         .illustration {
             width: 38rem;
-            margin-left: 0;
-            margin-right: 0;
-            overflow: hidden;
+            margin-left: -7rem;
+            margin-right: -7rem;
+            overflow: visible;
             img {
                 margin-right: -21rem;
+                width: 115%;
             }
         }
         .section-text-container {
-            width: 40%;
-            margin-top: 3rem;
+            width: 50%;
+            margin-top: 0;
             margin-left: 0;
+            text-align: left;
+            p {
+                padding-left: 0;
+            }
         }
     }
     
@@ -175,6 +170,10 @@
             .dark-text-container {
                 margin-top: 0rem;
                 width: 40%;
+                text-align: left;
+                p {
+                    padding-left: 0;
+                }
             }
             img.mobile-phone-img {
                 margin-top: -4rem;
@@ -184,14 +183,30 @@
 
     section#third-section {
         flex-direction: row;
-           img.laptop-img {
-                width: 73%;
-                margin-left: -19rem;;
+        picture {
+            width: 60%;
+            margin-left: -8rem;
+        }
+        .section-text-container {
+            width: 40%;
+            text-align: left;
+            margin-right: 7.5rem;
+            p {
+                padding-left: 0;
             }
-            .section-text-container {
-                width: 50%;
-                margin: 10rem 0;
-            }
+        }
+        img.laptop-img{
+            width: 100%;
+            margin-left: -7rem;
+        }
+        //    img.laptop-img {
+        //         width: 73%;
+        //         margin-left: -19rem;;
+        //     }
+        //     .section-text-container {
+        //         width: 50%;
+        //         margin: 10rem 0;
+        //     }
     }
 
     footer.footer {
@@ -216,33 +231,36 @@
 @media screen and (min-width: $breakpoint-desktop){ 
     section#first-section {
         .illustration {
-            overflow-x: hidden;
+            overflow-x: visible;
             width: 45rem;
             margin-top: -6rem;
                 img.desktop-illustration {
                     margin-right: -24rem;
                 }
         }
+        .section-text-container {
+            margin-top: -6rem;
+        }
     }
-    section.dark img.mobile-phone-img {
-        margin-bottom: -7rem;
-        margin-left: 2rem;
-    }
-    section#third-section {
-        .section-text-container{
+    section.dark {
+        img.mobile-phone-img {
+            margin-bottom: -7rem;
+            margin-left: 2rem;
+        }
+        .dark-text-container {
             width: 50%;
         }
-        img.laptop-img{
-            width: 73%;
-            margin-left: -21rem;
-        }
     }
+    // section#third-section {
+    //     .section-text-container {
+    //     }
+    // }
 }
 
 @media screen and (min-width: $breakpoint-wide-desktop) {
     section#first-section {
         .illustration {
-            overflow-x: visible;
+            overflow: visible;
         }
     } 
     section.dark {
@@ -251,9 +269,9 @@
             margin-top: -8rem;
             margin-bottom: -11rem;
         }
-        .dark-text-container {
-            width: 48%;
-        }
+        // .dark-text-container {
+        //     width: 48%;
+        // }
     }
     section#third-section {
         img.laptop-img {
