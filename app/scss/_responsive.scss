@@ -16,7 +16,6 @@
         .illustration {
             padding-top: 3rem;
             padding-bottom: 3rem;
-            width: 90%;
         }
         .section-text-container {
             width: 90%;
@@ -29,8 +28,10 @@
         padding-left: 0;
         padding-right: 0;
         overflow: visible;
+        padding-bottom: 10rem;
         img.mobile-phone-img {
             margin-top: -17rem;
+            width: 100%;
         }
         .dark-text-container {
             width:90%;
@@ -39,6 +40,12 @@
             padding-right: 0;
             h3 {
                 margin-top: 0;
+                font-weight: normal;
+                font-size: 2.5rem;
+            }
+            p {
+                padding: 0 1rem;
+                line-height: 2.3rem;
             }
         }
     }
@@ -178,6 +185,7 @@
             img.mobile-phone-img {
                 margin-top: -4rem;
                 margin-bottom: -6rem;
+                width: initial;
             }
     }
 

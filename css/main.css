@@ -606,7 +606,6 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   section#first-section .illustration {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    width: 90%;
   }
   section#first-section .section-text-container {
     width: 90%;
@@ -620,9 +619,11 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
     padding-left: 0;
     padding-right: 0;
     overflow: visible;
+    padding-bottom: 10rem;
   }
   section.dark img.mobile-phone-img {
     margin-top: -17rem;
+    width: 100%;
   }
   section.dark .dark-text-container {
     width: 90%;
@@ -632,6 +633,12 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   }
   section.dark .dark-text-container h3 {
     margin-top: 0;
+    font-weight: normal;
+    font-size: 2.5rem;
+  }
+  section.dark .dark-text-container p {
+    padding: 0 1rem;
+    line-height: 2.3rem;
   }
   section#third-section {
     padding-left: 0;
@@ -772,6 +779,7 @@ nav.footer-menu ul.menu ul.footer-submenu li a {
   section.dark img.mobile-phone-img {
     margin-top: -4rem;
     margin-bottom: -6rem;
+    width: initial;
   }
   section#third-section {
     -webkit-box-orient: horizontal;
